@@ -122,3 +122,8 @@ endif
 if $TERM == "xterm-256color"
     set t_Co=256
 endif
+
+" Include local vimrc if file exists
+if filereadable(glob("~/.vimrc.local"))
+	source ~/.vimrc.local
+endif
