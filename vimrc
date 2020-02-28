@@ -21,11 +21,11 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 "Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 "Plug 'Valloric/YouCompleteMe', { 'do':'./install.sh' }
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'scrooloose/syntastic'
 Plug 'kien/ctrlp.vim'
 
 Plug 'jeetsukumaran/vim-buffergator'
+Plug 'preservim/nerdcommenter'
 
 " " Press v over and over again to expand selection
 Plug 'terryma/vim-expand-region'

@@ -8,6 +8,9 @@ nmap <leader>w :w!<cr>
 " :W sudo saves the file
 command W w !sudo tee % > /dev/null
 
+" Reload vimrc configuration
+nmap <silent> <F5> :source $MYVIMRC<CR>
+
 " Toggle paste mode
 nmap <silent> <F4> :set invpaste<CR>:set paste?<CR>
 imap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
