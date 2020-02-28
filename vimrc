@@ -1,8 +1,10 @@
-set nocompatible
-
 " Set leader
 let mapleader = "\<Space>"
 let maplocalleader = ","
+
+"set background=dark
+colorscheme luna-term
+
 
 " Install vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -10,6 +12,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
+
 
 " Load plugin
 call plug#begin('~/.vim/plugged')
@@ -85,14 +88,6 @@ inoremap <silent><expr> <TAB>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-
-
-
-"""""""""
-""" Colors
-""""""""""
-"set background=dark
-colorscheme luna-term
 
 
 """"""""""""""
