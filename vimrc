@@ -17,11 +17,12 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 "Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plug 'Valloric/YouCompleteMe', { 'do':'./install.sh' }
+"Plug 'Valloric/YouCompleteMe', { 'do':'./install.sh' }
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'scrooloose/syntastic'
 Plug 'kien/ctrlp.vim'
-Plug 'mopp/mopkai.vim'
+
+Plug 'jeetsukumaran/vim-buffergator'
 
 " " Press v over and over again to expand selection
 Plug 'terryma/vim-expand-region'
@@ -30,6 +31,59 @@ vmap <C-v> <Plug>(expand_region_shrink)
 
 call plug#end()
 
+
+
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""SHEE
+
+" leader shortcut
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
+nmap <Leader><Leader> V
+nmap <Leader>b :make<CR>
+nnoremap <Leader><Tab> <C-^>
+nnoremap <Leader>y :!annotate expand('%:p') " what?
+
+nnoremap <Leader>o :FZF<CR>
+
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
+
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>s :wq<CR>
+nnoremap <Leader>v V
+nnoremap <Leader>g gf
+
+
+" TODO: usare e spiegare (TAB in presenza di spazi e prima colonna)
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <TAB>
+  \ pumvisible() ? "\<C-n>" :
+  \ <SID>check_back_space() ? "\<TAB>" :
+  \ coc#refresh()
+
+" inoremap <silent><expr> <CR>
+"   \ pumvisible() ? coc#_select_confirm() :
+"   \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+"   \ <SID>check_back_space() ? "\<TAB>" :
+"   \ coc#refresh()
+
+" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+"inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 
@@ -46,82 +100,7 @@ colorscheme luna-term
 """"""""""""""
 " set to autoread when a file is changed from the outside
 set autoread
-" Fast saving
-nmap <leader>w :w!<cr>
-" :W sudo saves the file
-command W w !sudo tee % > /dev/null
 
-
-""""""""""""""
-""" Backspace
-"""""""""""""
-set backspace=eol,start,indent
-set whichwrap+=<,>,h,l
-
-
-"""""""""""""
-""" Folding
-""""""""""""
-" set wrap
-" set textwidth=80
-
-""""""""""""
-""" Search
-"""""""""""
-set ignorecase
-set smartcase
-set hlsearch
-set incsearch
-
-
-""""""""""""""
-""" Display
-"""""""""""""
-set cmdheight=1
-set ruler
-set wildmenu
-set number
-set showmode
-set showcmd
-set hidden
-" show matching brackets
-set showmatch
-set mat=2
-set noerrorbells
-" Add a bit of extra margin to the left
-" set foldcolumn=1
-" set nowrap
-" set linebreak
-" highlight current line
-" set cursorline
-
-
-""""""""""""
-""" Swapping
-""""""""""""
-set nobackup
-set nowb
-set noswapfile
-
-
-""""""""""""
-""" Tabbing
-"""""""""""
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
-set expandtab
-set smarttab
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
-" autocomplete
-set ai 
-
-if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
-endif
-if $TERM == "xterm-256color"
-    set t_Co=256
-endif
 
 " Include local vimrc if file exists
 if filereadable(glob("~/.vimrc.local"))
