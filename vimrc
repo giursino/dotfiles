@@ -32,6 +32,10 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 map <leader>n :NERDTreeToggle<CR>:NERDTreeMirror<CR>
 
 
+" Status bar
+Plug 'vim-airline/vim-airline'
+
+
 " Syntax external checker (es: clang, shell, ...)
 Plug 'scrooloose/syntastic'
 

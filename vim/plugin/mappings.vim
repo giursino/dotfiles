@@ -26,6 +26,13 @@ nnoremap <Leader>g gf
 " :W sudo saves the file
 command W w !sudo tee % > /dev/null
 
+" <C-k> delete current row
+nmap <C-k> dd
+
+" Alt-j/k inserts blank line (TODO: not works)
+nnoremap <silent><A-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
+nnoremap <silent><A-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
+
 " Reload vimrc configuration
 nmap <silent> <F5> :source $MYVIMRC<CR>
 
@@ -141,18 +148,18 @@ else
 
   imap <A-]> <Esc>>>i
   imap <A-[> <Esc><<i
- 
+
   " Bubble single lines
-  nmap <C-Up> [e
-  nmap <C-Down> ]e
-  nmap <C-k> [e
-  nmap <C-j> ]e
+  "nmap <C-Up> [e
+  "nmap <C-Down> ]e
+  "nmap <C-k> [e
+  "nmap <C-j> ]e
 
   " Bubble multiple lines
-  vmap <C-Up> [egv
-  vmap <C-Down> ]egv
-  vmap <C-k> [egv
-  vmap <C-j> ]egv
+  "vmap <C-Up> [egv
+  "vmap <C-Down> ]egv
+  "vmap <C-k> [egv
+  "vmap <C-j> ]egv
 
   " Make shift-insert work like in Xterm
   map <S-Insert> <MiddleMouse>
