@@ -17,20 +17,90 @@ endif
 " Load plugin
 call plug#begin('~/.vim/plugged')
 
+
+" Press <C-UP> <C-DW> to move line
+Plug 'tpope/vim-unimpaired'
+nmap <C-Up> '[e'
+nmap <C-Down> ']e'
+vmap <C-Up> '[egv'
+vmap <C-Down> ']egv'
+
+
+" Press <leader>n to File browser
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-"Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-"Plug 'Valloric/YouCompleteMe', { 'do':'./install.sh' }
-Plug 'scrooloose/syntastic'
-Plug 'kien/ctrlp.vim'
+map <leader>n :NERDTreeToggle<CR>:NERDTreeMirror<CR>
 
+
+" Syntax external checker (es: clang, shell, ...)
+Plug 'scrooloose/syntastic'
+
+
+" Press <C-P> to do a fuzzy search
+Plug 'kien/ctrlp.vim'
+let g:ctrlp_map = ''
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$|bower_components|node_modules',
+  \ 'file': '\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
+  \ }
+
+
+" Press <leader>b to open buffer window
 Plug 'jeetsukumaran/vim-buffergator'
+
+
+" Press <leader>c<space> to toggle comment
 Plug 'preservim/nerdcommenter'
 
-" " Press v over and over again to expand selection
+
+" Press F6 to open UNDO panel
+Plug 'sjl/gundo.vim'
+nnoremap <F6> :GundoToggle<CR>
+imap <F6> <ESC>:GundoToggle<CR>
+
+
+" Press <F8> to show TAG
+Plug 'majutsushi/tagbar'
+nmap <F8> :TagbarToggle<CR>
+
+
+" Press v over and over again to expand selection
 Plug 'terryma/vim-expand-region'
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
+
+
+" Press <C-W>! to close all open buffers without closing windows
+Plug 'rgarver/Kwbd.vim'
+nmap <C-W>! <Plug>Kwbd
+
+
+" Git on vim
+Plug 'tpope/vim-fugitive'
+nmap <leader>gbl  :Gblame<CR>
+nmap <leader>gst  :Gstatus<CR>
+nmap <leader>gd   :Gdiff<CR>
+nmap <leader>glog :Glog<CR>
+nmap <leader>gc   :Gcommit<CR>
+nmap <leader>gp   :Git push<CR>
+
+
+" Show on first column the git status
+Plug 'airblade/vim-gitgutter'
+
+
+" Press <leader>nr to modify a single test region without modify the rest of text
+" Usefull to batch modification
+Plug 'chrisbra/NrrwRgn'
+" Change default key mapping in order to eliminate delay related with
+" NERDTree using the same starting sequence <leader>n
+silent! nunmap <leader>nr
+map <leader>rn :NarrowRegion<CR>
+
+
+"Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Plug 'Valloric/YouCompleteMe', { 'do':'./install.sh' }
+
 
 call plug#end()
 
