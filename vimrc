@@ -34,7 +34,9 @@ map <leader>n :NERDTreeToggle<CR>:NERDTreeMirror<CR>
 
 " Status bar
 Plug 'vim-airline/vim-airline'
-
+Plug 'vim-airline/vim-airline-themes'
+let g:airline_theme='simple'
+let g:airline_powerline_fonts=1
 
 " Syntax external checker (es: clang, shell, ...)
 Plug 'scrooloose/syntastic'
