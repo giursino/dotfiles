@@ -98,6 +98,15 @@ silent! nunmap <leader>nr
 map <leader>rn :NarrowRegion<CR>
 
 
+" Press <C-W>o to toggle the zoom of the active window
+Plug 'vim-scripts/ZoomWin'
+
+
+" Press <leader>ww to show personal wiki
+Plug 'vimwiki/vimwiki'
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
+
 "Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 "Plug 'Valloric/YouCompleteMe', { 'do':'./install.sh' }
 
