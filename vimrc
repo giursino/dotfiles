@@ -89,13 +89,12 @@ nmap <leader>gp   :Git push<CR>
 Plug 'airblade/vim-gitgutter'
 
 
-" Press <leader>nr to modify a single test region without modify the rest of text
+" Press <leader>r to modify a single test region without modify the rest of text
 " Usefull to batch modification
+" Unremap default leader-nr to speedy open NERDTree
 Plug 'chrisbra/NrrwRgn'
-" Change default key mapping in order to eliminate delay related with
-" NERDTree using the same starting sequence <leader>n
 silent! nunmap <leader>nr
-map <leader>rn :NarrowRegion<CR>
+map <leader>r :NarrowRegion<CR>
 
 
 " Press <C-W>o to toggle the zoom of the active window
@@ -118,7 +117,7 @@ call plug#end()
 
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""SHEE
+""""""""""""""""""" SHEERUN"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " leader shortcut
 vmap <Leader>y "+y
@@ -127,21 +126,12 @@ nmap <Leader>p "+p
 nmap <Leader>P "+P
 vmap <Leader>p "+p
 vmap <Leader>P "+P
-nmap <Leader><Leader> V
-nmap <Leader>b :make<CR>
-nnoremap <Leader><Tab> <C-^>
 nnoremap <Leader>y :!annotate expand('%:p') " what?
 
-nnoremap <Leader>o :FZF<CR>
-
+" copy/paste
 vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
-
-nnoremap <Leader>w :w<CR>
-nnoremap <Leader>s :wq<CR>
-nnoremap <Leader>v V
-nnoremap <Leader>g gf
 
 
 " TODO: usare e spiegare (TAB in presenza di spazi e prima colonna)
@@ -166,14 +156,6 @@ inoremap <silent><expr> <TAB>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-
-""""""""""""""
-""" Saving
-""""""""""""""
-" set to autoread when a file is changed from the outside
-set autoread
 
 
 " Include local vimrc if file exists

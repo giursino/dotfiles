@@ -2,8 +2,26 @@
 "" General Mappings (Normal, Visual, Operator-pending)
 ""
 
+" Press double leader to enter to VISUAL mode
+nmap <Leader><Leader> V
+
+" Press leader-b to build
+"nmap <Leader>b :make<CR>
+
+" alternate file
+nnoremap <Leader><Tab> <C-^>
+
+" Fast saving and quit
+nnoremap <Leader>s :wq<CR>
+
+" Fast quitting
+nmap <leader>q :q!<cr>
+
 " Fast saving
 nmap <leader>w :w!<cr>
+
+" Fast go to file under the cursor
+nnoremap <Leader>g gf
 
 " :W sudo saves the file
 command W w !sudo tee % > /dev/null

@@ -24,7 +24,7 @@ set shiftwidth=2                  " an autoindent (with <<) is two spaces
 set expandtab                     " use spaces, not tabs
 set list                          " Show invisible characters
 set backspace=indent,eol,start    " backspace through everything in insert mode
-"set autoindent   " TODO capire se abilitare
+"set autoindent                   " TODO capire se abilitare
 
 if exists("g:enable_mvim_shift_arrow")
   let macvim_hig_shift_movement = 1 " mvim shift-arrow-keys
@@ -51,9 +51,6 @@ set smartcase   " ... unless they contain at least one capital letter
 ""
 "" Wild settings
 ""
-
-" TODO: Investigate the precise meaning of these settings
-" set wildmode=list:longest,list:full
 
 " Disable output and VCS files
 set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
@@ -100,3 +97,9 @@ set noerrorbells
 " Show matching brackets
 set showmatch
 
+"""
+""" Saving
+"""
+
+" set to autoread when a file is changed from the outside
+set autoread
