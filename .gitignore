@@ -1,2 +1,3 @@
 vim/plugged/**
 vimrc.orig
+*.swp
