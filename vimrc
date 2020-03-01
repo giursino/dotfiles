@@ -1,15 +1,15 @@
-" Load settings
-source ~/.vim/filetypes.vim
-source ~/.vim/settings.vim
-source ~/.vim/mappings.vim
-
 " Set leader
 let mapleader = "\<Space>"
 let maplocalleader = ","
 
 " Set color
-set background=dark
+"set background=dark
 colorscheme luna-term
+
+" Load settings
+source ~/.vim/filetypes.vim
+source ~/.vim/settings.vim
+source ~/.vim/mappings.vim
 
 
 " Install vim-plug
