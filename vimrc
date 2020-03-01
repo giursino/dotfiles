@@ -1,8 +1,14 @@
+" Load settings
+source ~/.vim/filetypes.vim
+source ~/.vim/settings.vim
+source ~/.vim/mappings.vim
+
 " Set leader
 let mapleader = "\<Space>"
 let maplocalleader = ","
 
-"set background=dark
+" Set color
+set background=dark
 colorscheme luna-term
 
 
@@ -139,32 +145,32 @@ vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 
-
 " TODO: usare e spiegare (TAB in presenza di spazi e prima colonna)
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
+if 0
+  function! s:check_back_space() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~ '\s'
+  endfunction
 
-inoremap <silent><expr> <TAB>
-  \ pumvisible() ? "\<C-n>" :
-  \ <SID>check_back_space() ? "\<TAB>" :
-  \ coc#refresh()
+  inoremap <silent><expr> <TAB>
+    \ pumvisible() ? "\<C-n>" :
+    \ <SID>check_back_space() ? "\<TAB>" :
+    \ coc#refresh()
 
-" inoremap <silent><expr> <CR>
-"   \ pumvisible() ? coc#_select_confirm() :
-"   \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-"   \ <SID>check_back_space() ? "\<TAB>" :
-"   \ coc#refresh()
+  " inoremap <silent><expr> <CR>
+  "   \ pumvisible() ? coc#_select_confirm() :
+  "   \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+  "   \ <SID>check_back_space() ? "\<TAB>" :
+  "   \ coc#refresh()
 
-" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-"inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
+  " inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+  "inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 " Include local vimrc if file exists
 if filereadable(glob("~/.vimrc.local"))
-	source ~/.vimrc.local
+  source ~/.vimrc.local
 endif

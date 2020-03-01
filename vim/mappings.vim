@@ -24,7 +24,7 @@ nmap <leader>w :w!<cr>
 nnoremap <Leader>g gf
 
 " :W sudo saves the file
-command W w !sudo tee % > /dev/null
+command! W w !sudo tee % > /dev/null
 
 " <C-k> delete current row
 nmap <C-k> dd

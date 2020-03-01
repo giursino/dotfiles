@@ -7,12 +7,21 @@ if has('vim_starting') && !has('nvim') && &compatible
 endif
 set number            " Show line numbers
 set ruler             " Show line and column number
+set cursorline        " Highlight current line
+set noerrorbells      " Disable error bells
+set showcmd           " Show command line
+set showmatch         " highlight matching [{()}]
+set showmode          " Show mode
+"set hidden            " Set hidden to allow buffers to be browsed
+"set nostartofline     " Don’t reset cursor to start of line when moving around.
 syntax enable         " Turn on syntax highlighting allowing local overrides
 " Neovim disallow changing 'enconding' option after initialization
 " see https://github.com/neovim/neovim/pull/2929 for more details
 if !has('nvim')
   set encoding=utf-8  " Set default encoding to UTF-8
 endif
+set backupdir^=~/.vim/_backup//    " where to put backup files.
+set directory^=~/.vim/_temp//      " where to put swap files.
 
 ""
 "" Whitespace
@@ -38,6 +47,8 @@ set listchars+=extends:>          " The character to show in the last column whe
                                   " off and the line continues beyond the right of the screen
 set listchars+=precedes:<         " The character to show in the last column when wrap is
                                   " off and the line continues beyond the left of the screen
+"set listchars+=eol:¬              " Show end of line
+set listchars+=nbsp:⎵             " Show non breaking space
 
 ""
 "" Searching
@@ -51,6 +62,8 @@ set smartcase   " ... unless they contain at least one capital letter
 ""
 "" Wild settings
 ""
+set wildmenu    " visually autocomplete the command menu
+set wildmode=list:longest,list:full " Show a list of completions
 
 " Disable output and VCS files
 set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
@@ -70,36 +83,10 @@ set wildignore+=*/tmp/cache/assets/*/sprockets/*,*/tmp/cache/assets/*/sass/*
 " Disable temp and backup files
 set wildignore+=*.swp,*~,._*
 
-""
-"" Backup and swap files
-""
-
-set backupdir^=~/.vim/_backup//    " where to put backup files.
-set directory^=~/.vim/_temp//      " where to put swap files.
-
-"""
-""" Bell
-"""
-
-" Disable error bell
-set noerrorbells
-
-"""
-""" Display
-"""
-
-" TODO: capire se utili
-"set wildmenu
-"set showmode
-"set showcmd
-"set hidden
-
-" Show matching brackets
-set showmatch
 
 """
 """ Saving
 """
 
-" set to autoread when a file is changed from the outside
-set autoread
+set autoread                " Set to autoread when a file is changed from the outside
+au CursorHold * checktime   " Check for file changes, so autoread works as expected
