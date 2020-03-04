@@ -56,6 +56,8 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$|bower_components|node_modules',
   \ 'file': '\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
   \ }
+"do not change CtrlP to current file
+let g:ctrlp_working_path_mode = 0
 
 
 " Press <leader>b to open buffer window
