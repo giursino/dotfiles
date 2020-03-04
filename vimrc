@@ -2,10 +2,6 @@
 let mapleader = "\<Space>"
 let maplocalleader = ","
 
-" Set color
-"set background=dark
-colorscheme luna-term
-
 " Load settings
 source ~/.vim/filetypes.vim
 source ~/.vim/settings.vim
@@ -22,6 +18,11 @@ endif
 
 " Load plugin
 call plug#begin('~/.vim/plugged')
+
+
+" Colorscheme
+Plug 'morhetz/gruvbox'
+Plug 'notpratheek/vim-luna'
 
 
 " Press <C-UP> <C-DW> to move line
@@ -41,7 +42,6 @@ map <leader>n :NERDTreeToggle<CR>:NERDTreeMirror<CR>
 " Status bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme='simple'
 let g:airline_powerline_fonts=1
 
 " Syntax external checker (es: clang, shell, ...)
@@ -118,13 +118,32 @@ Plug 'vimwiki/vimwiki'
 let g:vimwiki_list = [{'path': '~/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 
-"Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+" Press '*' to highlight and search the word under cursor on file
+Plug 'vim-scripts/visualstar.vim'
+
+
+" Press <TAB> to autocomplete
+Plug 'ervandew/supertab'
+
+
+" Show in red trailing spaces
+" Clean it using :FixWhiteSpaces
+Plug 'bronson/vim-trailing-whitespace'
+
+
+" Press <TAB> to autocomplete the code
 "Plug 'Valloric/YouCompleteMe', { 'do':'./install.sh' }
 
 
 call plug#end()
 
 
+" Set color
+set background=dark
+colorscheme luna-term
+"colorscheme gruvbox
+let g:airline_theme='base16_grayscale'
 
 
 
