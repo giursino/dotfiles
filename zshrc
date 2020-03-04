@@ -89,6 +89,8 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     export TERM="xterm-256color"
 fi
 
+# Save display for X11 forwarding
+echo $DISPLAY > ~/.display
 
 # # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

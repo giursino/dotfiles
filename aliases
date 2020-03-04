@@ -20,5 +20,8 @@ alias la='ls -lAh'
 alias lart='ls -lart'
 alias l1='ls -1'
 
+# Fix display on X11 forwarding
+alias fix-display='export DISPLAY=$(cat ~/.display)'
+
 # Include custom aliases
 [[ -f $HOME/.aliases.local ]] && source $HOME/.aliases.local
