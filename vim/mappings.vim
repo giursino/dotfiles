@@ -33,6 +33,9 @@ nmap <C-k> dd
 nnoremap <silent><A-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
 nnoremap <silent><A-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
+" 'gc'  switch two character
+:nnoremap <silent> gc xph
+
 " Reload vimrc configuration
 nmap <silent> <F5> :source $MYVIMRC<CR>
 
