@@ -44,6 +44,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 let g:airline_powerline_fonts=1
 
+
 " Syntax external checker (es: clang, shell, ...)
 Plug 'scrooloose/syntastic'
 
@@ -105,8 +106,6 @@ Plug 'airblade/vim-gitgutter'
 " Usefull to batch modification
 " Unremap default leader-nr to speedy open NERDTree
 Plug 'chrisbra/NrrwRgn'
-silent! nunmap <leader>nr
-map <leader>r :NarrowRegion<CR>
 
 
 " Press <C-W>o to toggle the zoom of the active window
