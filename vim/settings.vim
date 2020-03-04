@@ -62,8 +62,10 @@ set smartcase   " ... unless they contain at least one capital letter
 ""
 "" Wild settings
 ""
-set wildmenu    " visually autocomplete the command menu
-set wildmode=list:longest,list:full " Show a list of completions
+" Show a list of completions
+" First TAB complete till longest common string and show list of matches
+" Second TAB complete with first match
+set wildmode=list:longest,full
 
 " Disable output and VCS files
 set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
