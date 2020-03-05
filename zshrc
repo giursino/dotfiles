@@ -93,5 +93,8 @@ fi
 # Save display for X11 forwarding
 echo $DISPLAY > ~/.display
 
+# Add dotfiles bin path
+export PATH="$HOME/.dotfiles/bin:$PATH"
+
 # # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
