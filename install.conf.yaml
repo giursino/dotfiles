@@ -13,6 +13,7 @@
     ~/.oh-my-zsh: oh-my-zsh
     ~/.aliases: aliases
     ~/.zshrc: zshrc
+    ~/.gitconfig: gitconfig
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [vim +PlugInstall +PlugClean +qall, Installing Vim plugins]
