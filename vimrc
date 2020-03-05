@@ -1,3 +1,12 @@
+" Use Vim settings, rather then Vi settings (much better!).
+" This must be first, because it changes other options as a side effect.
+set nocompatible
+
+" Load local vimrc settings
+if filereadable(expand("~/.vimrc.before"))
+  source ~/.vimrc.before
+endif
+
 " Set leader
 let mapleader = "\<Space>"
 let maplocalleader = ","
