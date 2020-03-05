@@ -8,7 +8,6 @@ endif
 set number            " Show line numbers
 set ruler             " Show line and column number
 set cursorline        " Highlight current line
-set noerrorbells      " Disable error bells
 set showcmd           " Show command line
 set showmatch         " highlight matching [{()}]
 set showmode          " Show mode
@@ -22,6 +21,10 @@ if !has('nvim')
 endif
 set backupdir^=~/.vim/_backup//    " where to put backup files.
 set directory^=~/.vim/_temp//      " where to put swap files.
+
+set noerrorbells      " Disable error bells
+set visualbell t_vb=  " Disable bell
+
 
 ""
 "" Whitespace
