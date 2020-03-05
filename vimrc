@@ -146,6 +146,10 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'kergoth/vim-bitbake'
 
 
+" Directory diff
+Plug 'will133/vim-dirdiff'
+
+
 " Press <TAB> to autocomplete the code
 "Plug 'Valloric/YouCompleteMe', { 'do':'./install.sh' }
 
