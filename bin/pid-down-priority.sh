@@ -42,4 +42,4 @@ PID=$1
 #  POSITIVE -> less priority
 #  NEGATIVE -> high priority
 
-renice -n 15 -p $(find_pid_children.sh $PID)
+renice -n 15 -p $(find-pid-children.sh $PID)
