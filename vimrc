@@ -142,6 +142,10 @@ Plug 'ervandew/supertab'
 Plug 'bronson/vim-trailing-whitespace'
 
 
+" Bitbake syntax highlight
+Plug 'kergoth/vim-bitbake'
+
+
 " Press <TAB> to autocomplete the code
 "Plug 'Valloric/YouCompleteMe', { 'do':'./install.sh' }
 
