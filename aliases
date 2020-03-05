@@ -1,8 +1,7 @@
 # Shortcuts
-alias d="cd ~/Dropbox"
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-alias doc="cd ~/Documents"
+alias dl="cd ~/Scaricati"
+alias dt="cd ~/Scrivania"
+alias doc="cd ~/Documenti"
 
 # Show timer
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'

@@ -16,7 +16,7 @@ CASE_SENSITIVE="true"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -82,13 +82,15 @@ export EDITOR='vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 
-# Aliases
-[[ -f $HOME/.aliases ]] && source $HOME/.aliases
-
 # Color
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     export TERM="xterm-256color"
 fi
+
+# Disable bell
+unsetopt beep
+unsetopt hist_beep
+unsetopt list_beep
 
 # Save display for X11 forwarding
 echo $DISPLAY > ~/.display
@@ -96,5 +98,8 @@ echo $DISPLAY > ~/.display
 # Add dotfiles bin path
 export PATH="$HOME/.dotfiles/bin:$PATH"
 
-# # Local config
+# Aliases
+[[ -f $HOME/.aliases ]] && source $HOME/.aliases
+
+# Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
