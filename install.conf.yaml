@@ -1,11 +1,14 @@
 - defaults:
     link:
       relink: true
+      force: true
 
 - clean: ['~']
 
 - link:
-    ~/.dotfiles: ''
+    ~/.dotfiles:
+      path: ''
+      force: false
     ~/.tmux.conf: tmux.conf
     ~/.tmux: tmux
     ~/.vim: vim
@@ -13,7 +16,9 @@
     ~/.oh-my-zsh: oh-my-zsh
     ~/.aliases: aliases
     ~/.zshrc: zshrc
-    ~/.gitconfig: gitconfig
+    ~/.gitconfig:
+      path: gitconfig
+      force: false
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [vim +PlugInstall +PlugClean +qall, Installing Vim plugins]
