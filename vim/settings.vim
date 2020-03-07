@@ -2,9 +2,6 @@
 "" Basic Setup
 ""
 
-if has('vim_starting') && !has('nvim') && &compatible
-  set nocompatible               " Be iMproved
-endif
 set number            " Show line numbers
 set ruler             " Show line and column number
 set cursorline        " Highlight current line
@@ -42,7 +39,7 @@ if exists("g:enable_mvim_shift_arrow")
   let macvim_hig_shift_movement = 1 " mvim shift-arrow-keys
 endif
 
-" List chars
+" List chars (how to show then non printable chars)
 set listchars=""                  " Reset the listchars
 set listchars=tab:\ \             " a tab should display as "  ", trailing whitespace as "."
 set listchars+=trail:.            " show trailing spaces as dots
@@ -95,3 +92,36 @@ set wildignore+=*.swp,*~,._*
 
 set autoread                " Set to autoread when a file is changed from the outside
 au CursorHold * checktime   " Check for file changes, so autoread works as expected
+
+
+"""
+""" Display
+"""
+set background=dark
+colorscheme luna-term
+let g:airline_theme='base16_grayscale'
+
+
+"""
+""" Plugins customization
+"""
+
+let g:airline_powerline_fonts=1
+
+
+
+" Fuzzy search
+let g:ctrlp_map = ''
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$|bower_components|node_modules',
+  \ 'file': '\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
+  \ }
+"do not change CtrlP to current file
+let g:ctrlp_working_path_mode = 0
+
+
+" vimwiki
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
+
+

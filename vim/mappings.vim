@@ -93,107 +93,100 @@ nmap <leader>hs :set hlsearch! hlsearch?<CR>
 " Adjust viewports to the same size
 map <Leader>= <C-w>=
 
-if has("gui_macvim") && has("gui_running")
-  " Map command-[ and command-] to indenting or outdenting
-  " while keeping the original selection in visual mode
-  vmap <D-]> >gv
-  vmap <D-[> <gv
+" Map command-[ and command-] to indenting or outdenting
+" while keeping the original selection in visual mode
+vmap <A-]> >gv
+vmap <A-[> <gv
 
-  nmap <D-]> >>
-  nmap <D-[> <<
+nmap <A-]> >>
+nmap <A-[> <<
 
-  omap <D-]> >>
-  omap <D-[> <<
+omap <A-]> >>
+omap <A-[> <<
 
-  imap <D-]> <Esc>>>i
-  imap <D-[> <Esc><<i
+imap <A-]> <Esc>>>i
+imap <A-[> <Esc><<i
 
-  " Bubble single lines
-  nmap <D-Up> [e
-  nmap <D-Down> ]e
-  nmap <D-k> [e
-  nmap <D-j> ]e
+" Make shift-insert work like in Xterm
+map <S-Insert> <MiddleMouse>
+map! <S-Insert> <MiddleMouse>
 
-  " Bubble multiple lines
-  vmap <D-Up> [egv
-  vmap <D-Down> ]egv
-  vmap <D-k> [egv
-  vmap <D-j> ]egv
+" Map Control-# to switch tabs
+map  <C-0> 0gt
+imap <C-0> <Esc>0gt
+map  <C-1> 1gt
+imap <C-1> <Esc>1gt
+map  <C-2> 2gt
+imap <C-2> <Esc>2gt
+map  <C-3> 3gt
+imap <C-3> <Esc>3gt
+map  <C-4> 4gt
+imap <C-4> <Esc>4gt
+map  <C-5> 5gt
+imap <C-5> <Esc>5gt
+map  <C-6> 6gt
+imap <C-6> <Esc>6gt
+map  <C-7> 7gt
+imap <C-7> <Esc>7gt
+map  <C-8> 8gt
+imap <C-8> <Esc>8gt
+map  <C-9> 9gt
+imap <C-9> <Esc>9gt
 
-  " Map Command-# to switch tabs
-  map  <D-0> 0gt
-  imap <D-0> <Esc>0gt
-  map  <D-1> 1gt
-  imap <D-1> <Esc>1gt
-  map  <D-2> 2gt
-  imap <D-2> <Esc>2gt
-  map  <D-3> 3gt
-  imap <D-3> <Esc>3gt
-  map  <D-4> 4gt
-  imap <D-4> <Esc>4gt
-  map  <D-5> 5gt
-  imap <D-5> <Esc>5gt
-  map  <D-6> 6gt
-  imap <D-6> <Esc>6gt
-  map  <D-7> 7gt
-  imap <D-7> <Esc>7gt
-  map  <D-8> 8gt
-  imap <D-8> <Esc>8gt
-  map  <D-9> 9gt
-  imap <D-9> <Esc>9gt
-else
-  " Map command-[ and command-] to indenting or outdenting
-  " while keeping the original selection in visual mode
-  vmap <A-]> >gv
-  vmap <A-[> <gv
 
-  nmap <A-]> >>
-  nmap <A-[> <<
+" copy/paste to system clipboard
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
+nnoremap <Leader>y :!annotate expand('%:p') " what?
 
-  omap <A-]> >>
-  omap <A-[> <<
+" copy/paste: jump to the end of the text you pasted
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
 
-  imap <A-]> <Esc>>>i
-  imap <A-[> <Esc><<i
+" fast select last pasted text
+noremap gV `[v`]
 
-  " Bubble single lines
-  "nmap <C-Up> [e
-  "nmap <C-Down> ]e
-  "nmap <C-k> [e
-  "nmap <C-j> ]e
 
-  " Bubble multiple lines
-  "vmap <C-Up> [egv
-  "vmap <C-Down> ]egv
-  "vmap <C-k> [egv
-  "vmap <C-j> ]egv
+" Press <C-UP> <C-DW> to move line
+nmap <C-Up> '[e'
+nmap <C-Down> ']e'
+vmap <C-Up> '[egv'
+vmap <C-Down> ']egv'
 
-  " Make shift-insert work like in Xterm
-  map <S-Insert> <MiddleMouse>
-  map! <S-Insert> <MiddleMouse>
 
-  " Map Control-# to switch tabs
-  map  <C-0> 0gt
-  imap <C-0> <Esc>0gt
-  map  <C-1> 1gt
-  imap <C-1> <Esc>1gt
-  map  <C-2> 2gt
-  imap <C-2> <Esc>2gt
-  map  <C-3> 3gt
-  imap <C-3> <Esc>3gt
-  map  <C-4> 4gt
-  imap <C-4> <Esc>4gt
-  map  <C-5> 5gt
-  imap <C-5> <Esc>5gt
-  map  <C-6> 6gt
-  imap <C-6> <Esc>6gt
-  map  <C-7> 7gt
-  imap <C-7> <Esc>7gt
-  map  <C-8> 8gt
-  imap <C-8> <Esc>8gt
-  map  <C-9> 9gt
-  imap <C-9> <Esc>9gt
-endif
+" Stop that stupid window (command window, :help q:) from popping up
+map q: :q
+
+
+" Press <leader>n to File browser
+map <leader>n :NERDTreeToggle<CR>:NERDTreeMirror<CR>
+
+" Press F6 to open UNDO panel
+nnoremap <F6> :GundoToggle<CR>
+imap <F6> <ESC>:GundoToggle<CR>
+
+" Press <F8> to show TAG
+nmap <F8> :TagbarToggle<CR>
+
+" Press v over and over again to expand selection
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+
+" Press <C-W>! to close all open buffers without closing windows
+nmap <C-W>! <Plug>Kwbd
+
+" Git on vim
+nmap <leader>gbl  :Gblame<CR>
+nmap <leader>gst  :Gstatus<CR>
+nmap <leader>gd   :Gdiff<CR>
+nmap <leader>glog :Glog<CR>
+nmap <leader>gc   :Gcommit<CR>
+nmap <leader>gp   :Git push<CR>
 
 ""
 "" Command-Line Mappings
