@@ -9,7 +9,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="afowler"
 # ZSH_THEME="agnoster" # (this is one of the fancy ones)
 # Uncomment the following line to use case-sensitive completion.
-CASE_SENSITIVE="true"
+# CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
