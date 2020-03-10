@@ -188,6 +188,9 @@ nmap <leader>glog :Glog<CR>
 nmap <leader>gc   :Gcommit<CR>
 nmap <leader>gp   :Git push<CR>
 
+" Press <leader>f to silver search
+map <leader>f :Ag<space>
+
 ""
 "" Command-Line Mappings
 ""
