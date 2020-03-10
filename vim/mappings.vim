@@ -191,6 +191,9 @@ nmap <leader>gp   :Git push<CR>
 " Press <leader>f to silver search
 map <leader>f :Ag<space>
 
+" Press <C-p> to fuzzy search
+map <C-p> :CtrlP<CR>
+
 ""
 "" Command-Line Mappings
 ""
