@@ -103,6 +103,10 @@ Plug 'kergoth/vim-bitbake'
 Plug 'will133/vim-dirdiff'
 
 
+" Silver search
+Plug 'rking/ag.vim'
+
+
 " Press <TAB> to autocomplete the code
 "Plug 'Valloric/YouCompleteMe', { 'do':'./install.sh' }
 
