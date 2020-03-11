@@ -188,11 +188,9 @@ nmap <leader>glog :Glog<CR>
 nmap <leader>gc   :Gcommit<CR>
 nmap <leader>gp   :Git push<CR>
 
-" Press <leader>f to silver search
+" Press <leader>f to silver search (ACK clone)
 map <leader>f :Ag<space>
 
-" Press <C-p> to fuzzy search
-map <C-p> :CtrlP<CR>
 
 ""
 "" Command-Line Mappings
