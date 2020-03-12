@@ -107,6 +107,10 @@ Plug 'will133/vim-dirdiff'
 Plug 'rking/ag.vim'
 
 
+" <C-h/j/k/l> to move in Tmux without tmux prefix
+Plug 'christoomey/vim-tmux-navigator'
+
+
 " Press <TAB> to autocomplete the code
 "Plug 'Valloric/YouCompleteMe', { 'do':'./install.sh' }
 
