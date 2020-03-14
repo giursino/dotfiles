@@ -53,6 +53,7 @@ git pull
 ## Thanks
 
 * [github dotfiles](https://dotfiles.github.io)
+* [mflowers dotfiles](https://github.com/marcoflowers/dotfiles)
 * [sheerun vim tips](https://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/)
 * [alepez dotfiles](https://github.com/alepez/dotfiles)
 * [Dotbot](https://github.com/anishathalye/dotbot)
