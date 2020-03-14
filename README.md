@@ -13,7 +13,7 @@ This is my setup using the power of: ZSH + VIM + TMUX!
 * tmux
 * vim
 * python
-
+* silversearcher-ag
 
 ## Install
 
