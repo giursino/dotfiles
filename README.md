@@ -1,4 +1,4 @@
-# giursino dotfiles
+# Giuseppe Ursino dotfiles
 
 This repository contains my setup to syncronize all linux shell on
 different machines.
