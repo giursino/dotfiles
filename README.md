@@ -1,7 +1,9 @@
-# My dotfiles for ZSH + VIM + TMUX
+# giursino dotfiles
 
 This repository contains my setup to syncronize all linux shell on
 different machines.
+
+This is my setup using the power of: ZSH + VIM + TMUX!
 
 
 ## Dependencies
@@ -32,10 +34,10 @@ git pull
 
 ## Local customizations
 
-* *~/bin*: local scripts (share machine scripts are inside `dotfiles/bin`)
-* *~/.aliases.local*: local aliases
-* *~/.zshrc.local*: local zsh setup
-* *~/.gitconfig.local*: local gitconfig. Please add the local username
+* **`~/bin`**: local scripts (share machine scripts are inside `dotfiles/bin`)
+* **`~/.aliases.local`**: local aliases
+* **`~/.zshrc.local`**: local zsh setup
+* **`~/.gitconfig.local`**: local gitconfig. Please add the local username
   and mail.
   Minimal setup:
   ```
@@ -43,10 +45,10 @@ git pull
           email = mail@domain.com
           name = Name Surname
   ```
-* *~/.vimrc.before*: vimrc local setup loaded before shared vimrc script
-* *~/.vimrc.after*: vimrc local setup loaded after shared vimrc script
-* *~/.vimrc.local*: local vimrc
-* *~/.tmux.local.conf*: local tmux setup
+* **`~/.vimrc.before`**: vimrc local setup loaded before shared vimrc script
+* **`~/.vimrc.after`**: vimrc local setup loaded after shared vimrc script
+* **`~/.vimrc.local`**: local vimrc
+* **`~/.tmux.local.conf`**: local tmux setup
 
 ## Thanks
 
