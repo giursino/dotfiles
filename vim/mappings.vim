@@ -11,14 +11,11 @@ nmap <Leader><Leader> V
 " alternate file
 nnoremap <Leader><Tab> <C-^>
 
-" Fast saving and quit
-nnoremap <Leader>s :wq<CR>
-
 " Fast quitting
 nmap <leader>q :q!<cr>
 
 " Fast saving
-nmap <leader>w :w!<cr>
+nmap <leader>s :w!<cr>
 
 " Fast go to file under the cursor
 nnoremap <Leader>g gf
@@ -26,8 +23,8 @@ nnoremap <Leader>g gf
 " :W sudo saves the file
 command! W w !sudo tee % > /dev/null
 
-" <C-k> delete current row
-nmap <C-k> dd
+" <C-d> delete current row
+nmap <C-d> dd
 
 " Alt-j/k inserts blank line (TODO: not works)
 nnoremap <silent><A-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
@@ -152,7 +149,7 @@ nnoremap <silent> p p`]
 noremap gV `[v`]
 
 
-" Press <C-UP> <C-DW> to move line
+" Press <C-UP> <C-DW> to move line (TODO: not works)
 nmap <C-Up> '[e'
 nmap <C-Down> ']e'
 vmap <C-Up> '[egv'
@@ -196,7 +193,7 @@ map <leader>f :Ag<space>
 "" Command-Line Mappings
 ""
 
-" After whitespace, insert the current directory into a command-line path
+" Press <C-P> to insert the current directory into a command-line path after whitespace
 cnoremap <expr> <C-P> getcmdline()[getcmdpos()-2] ==# ' ' ? expand('%:p:h') : "\<C-P>"
 
 " %% to get current file path

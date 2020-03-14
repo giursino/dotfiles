@@ -57,3 +57,4 @@ git pull
 * [sheerun vim tips](https://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/)
 * [alepez dotfiles](https://github.com/alepez/dotfiles)
 * [Dotbot](https://github.com/anishathalye/dotbot)
+* [janus vim distro](https://github.com/carlhuda/janus)
