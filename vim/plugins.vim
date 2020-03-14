@@ -45,8 +45,6 @@ Plug 'preservim/nerdcommenter'
 
 
 " undo graph window 
-" TODO: not works on standar vim, need vim build with python support
-"       fix it using conditional plug, see vim-plug documentation
 Plug 'sjl/gundo.vim'
 
 
