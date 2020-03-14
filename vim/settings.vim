@@ -123,4 +123,6 @@ let g:ctrlp_working_path_mode = 0
 let g:vimwiki_list = [{'path': '~/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 
-
+if has('python3')
+  let g:gundo_prefer_python3 = 1
+endif
