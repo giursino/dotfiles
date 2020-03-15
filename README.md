@@ -14,6 +14,8 @@ This is my setup using the power of: ZSH + VIM + TMUX!
 * vim
 * python
 * silversearcher-ag
+* exuberant-ctags
+* fonts-powerline
 
 ## Install
 

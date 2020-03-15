@@ -14,8 +14,12 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'notpratheek/vim-luna'
 
-
+" Bubble line
 Plug 'tpope/vim-unimpaired'
+
+" Surrounding prarentheses, brackets, quotes, XML tags and more.
+" Es: use cs' to change the ' surround
+Plug 'tpope/vim-surround'
 
 
 " File browser
