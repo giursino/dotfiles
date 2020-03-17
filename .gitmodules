@@ -4,3 +4,6 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
+[submodule "tmux/tmux-better-mouse-mode"]
+	path = tmux/tmux-better-mouse-mode
+	url = https://github.com/NHDaly/tmux-better-mouse-mode
