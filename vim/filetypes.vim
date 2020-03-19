@@ -21,11 +21,12 @@ if has("autocmd")
   " see :help last-position-jump
   au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g`\"" | endif
-endif
 
-" Auto git commit vimwiki on save
-augroup vimwiki
-  au! BufRead ~/vimwiki/index.md !git pull
-  au! BufWritePost ~/vimwiki/* !git add "%";git commit -m "Auto commit of %:t." "%";git push
-augroup END
+  " Auto git commit vimwiki on save
+  augroup vimwiki
+    au! BufRead ~/vimwiki/index.md !git pull
+    au! BufWritePost ~/vimwiki/* !git add "%";git commit -m "Auto commit of %:t." "%";git push
+  augroup END
+
+endif
 
