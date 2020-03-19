@@ -160,8 +160,9 @@ vmap <C-Down> ']egv'
 map q: :q
 
 
-" Press <leader>n to File browser
+" Press <leader>n to File browser, and <leader>v to open from file focused
 map <leader>n :NERDTreeToggle<CR>:NERDTreeMirror<CR>
+map <leader>v :NERDTreeFind<CR>
 
 " Press F6 to open UNDO panel
 nnoremap <F6> :GundoToggle<CR>
