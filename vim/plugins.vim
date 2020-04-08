@@ -21,6 +21,9 @@ Plug 'tpope/vim-unimpaired'
 " Es: use cs' to change the ' surround
 Plug 'tpope/vim-surround'
 
+" SudoWrite
+Plug 'tpope/vim-eunuch'
+
 
 " File browser
 Plug 'scrooloose/nerdtree'
@@ -48,7 +51,7 @@ Plug 'jeetsukumaran/vim-buffergator'
 Plug 'preservim/nerdcommenter'
 
 
-" undo graph window 
+" undo graph window
 Plug 'sjl/gundo.vim'
 
 
