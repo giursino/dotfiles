@@ -95,8 +95,8 @@ unsetopt list_beep
 # Save display for X11 forwarding
 echo $DISPLAY > ~/.display
 
-# Add dotfiles bin path
-export PATH="$HOME/.dotfiles/bin:$PATH"
+# Add dotfiles and home bin path
+export PATH="$HOME/.dotfiles/bin:$HOME/bin:$PATH"
 
 # Aliases
 [[ -f $HOME/.aliases ]] && source $HOME/.aliases

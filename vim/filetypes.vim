@@ -8,7 +8,7 @@ if has("autocmd")
   " In Makefiles, use real tabs, not tabs expanded to spaces
   au FileType make setlocal noexpandtab
 
-  " Make sure all mardown files have the correct filetype set and setup wrapping
+  " Make sure all markdown files have the correct filetype set and setup wrapping
   au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown
   if !exists("g:disable_markdown_autostyle")
     au FileType markdown setlocal wrap linebreak textwidth=72 nolist
