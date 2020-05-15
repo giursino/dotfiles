@@ -189,6 +189,10 @@ nmap <leader>gp   :Git push<CR>
 " Press <leader>f to silver search (ACK clone)
 map <leader>f :Ag<space>
 
+" GitGutter mappings, because the default <leader>hs is already used
+nmap ghs <Plug>(GitGutterStageHunk)
+nmap ghu <Plug>(GitGutterUndoHunk)
+nmap ghp <Plug>(GitGutterPreviewHunk)
 
 ""
 "" Command-Line Mappings
