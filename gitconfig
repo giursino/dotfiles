@@ -13,7 +13,7 @@
 [gc]
   autoDetach = false
 [include]
-  path = ~/.gitconfig.local
+  path = .gitconfig.local
 [filter "lfs"]
   process = git-lfs filter-process
   required = true
