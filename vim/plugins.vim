@@ -122,4 +122,8 @@ Plug 'christoomey/vim-tmux-navigator'
 "Plug 'Valloric/YouCompleteMe', { 'do':'./install.sh' }
 
 
+" Enable transparent pasting into vim (i.e. no more `:set paste!`)
+Plug 'ConradIrwin/vim-bracketed-paste'
+
+
 call plug#end()
