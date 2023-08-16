@@ -17,6 +17,11 @@ This is my setup using the power of: ZSH + VIM + TMUX!
 * exuberant-ctags
 * fonts-powerline
 
+For Ubuntu like distro:
+```sh
+sudo apt install git zsh tmux vim silversearcher-ag exuberant-ctags fonts-powerline
+```
+
 ## Install
 
 ```
