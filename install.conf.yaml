@@ -23,6 +23,3 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [vim +PlugInstall +PlugClean +qall, Installing Vim plugins]
-  -
-    command: if [ ! -d ~/vimwiki ]; then git clone https://ursinog@bitbucket.org/ursinog/vimwiki.git ~/vimwiki; else echo "Nothing to do"; fi
-    description: Installing vimwiki repo
