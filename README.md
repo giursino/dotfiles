@@ -21,7 +21,12 @@ This is my setup using the power of: ZSH + VIM + TMUX!
 
 ```
 cd ~
+
+# using Git over HTTP (public available)
+git clone https://github.com/giursino/dotfiles.git
+# or using Git over SSH (need SSH keys)
 git clone git@github.com:giursino/dotfiles.git
+
 cd dotfiles
 ./install
 ```
