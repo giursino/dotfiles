@@ -44,7 +44,7 @@ if ! which youtube-dl > /dev/null; then
 fi
 
 if ! which ffmpeg > /dev/null; then
-  echo "ERROR: youtube-dl not installed"
+  echo "ERROR: ffmpeg not installed"
   exit 1
 fi
 
